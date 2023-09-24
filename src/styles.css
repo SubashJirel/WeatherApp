@@ -4,10 +4,13 @@
   box-sizing: border-box;
   font-family: 'Raleway', sans-serif;
 }
+body {
+  background: #222;
+}
 .card {
-  border: 2px solid red;
   width: 90%;
   max-width: 470px;
+  border-radius: 20px;
   background: #22c1c3; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to bottom,
@@ -20,7 +23,7 @@
     #22c1c3
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: #fff;
-  margin: 100px auto 0;
+  margin: 50px auto 0;
   padding: min(5%, 40px) min(5%, 35px);
   text-align: center;
 }
@@ -54,4 +57,37 @@
 }
 .search button span {
   font-size: 40px;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10%;
+}
+.weather h1 {
+  font-size: 80px;
+  font-weight: 500;
+}
+.weather h2 {
+  font-size: 50px;
+  font-weight: 400;
+  margin-top: -10px;
+}
+
+#weather-icon {
+  width: 170px;
+}
+.col {
+  display: flex;
+  text-align: left;
+  align-items: center;
+  gap: 10px;
+}
+.col img {
+  width: 40px;
+}
+.humidity,
+.wind {
+  font-size: 25px;
 }
