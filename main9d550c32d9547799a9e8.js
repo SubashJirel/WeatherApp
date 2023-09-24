@@ -21,10 +21,16 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `body {
-  background-color: aquamarine;
+___CSS_LOADER_EXPORT___.push([module.id, `* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
 }
-`, "",{"version":3,"sources":["webpack://./src/styles.css"],"names":[],"mappings":"AAAA;EACE,4BAA4B;AAC9B","sourcesContent":["body {\r\n  background-color: aquamarine;\r\n}\r\n"],"sourceRoot":""}]);
+body {
+  /* background-color: #222; */
+}
+`, "",{"version":3,"sources":["webpack://./src/styles.css"],"names":[],"mappings":"AAAA;EACE,SAAS;EACT,UAAU;EACV,sBAAsB;EACtB,kCAAkC;AACpC;AACA;EACE,4BAA4B;AAC9B","sourcesContent":["* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n  font-family: 'Raleway', sans-serif;\r\n}\r\nbody {\r\n  /* background-color: #222; */\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -490,6 +496,33 @@ function domManipulation() {
 
 /***/ }),
 
+/***/ "./src/weather.js":
+/*!************************!*\
+  !*** ./src/weather.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+async function getWeatherData() {
+  const response = await fetch(
+    'http://api.weatherapi.com/v1/current.json?key=bc2325d447fe4062b0350010232009&q=kathmandu'
+  );
+  const data = await response.json();
+  console.log(data);
+  console.log(data.location.country, data.location.name);
+  console.log(data.current.temp_c);
+  console.log(data.current.temp_f);
+  return data;
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getWeatherData);
+
+
+/***/ }),
+
 /***/ "./src/asset/weatherImage.jpg":
 /*!************************************!*\
   !*** ./src/asset/weatherImage.jpg ***!
@@ -618,17 +651,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dom */ "./src/dom.js");
 /* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles.css */ "./src/styles.css");
 /* harmony import */ var _asset_weatherImage_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./asset/weatherImage.jpg */ "./src/asset/weatherImage.jpg");
+/* harmony import */ var _weather__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./weather */ "./src/weather.js");
 console.log('Hello from index.js');
 
 
 
-const imageBox = document.querySelector('#backgroundImage');
-imageBox.src = _asset_weatherImage_jpg__WEBPACK_IMPORTED_MODULE_2__;
 
-console.log(_dom__WEBPACK_IMPORTED_MODULE_0__["default"]);
+// const imageBox = document.querySelector('#backgroundImage');
+// imageBox.src = weatherImage;
+
+
+console.log((0,_dom__WEBPACK_IMPORTED_MODULE_0__["default"])());
+console.log((0,_weather__WEBPACK_IMPORTED_MODULE_3__["default"])());
 
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=main0a68eefce061f6e855b9.js.map
+//# sourceMappingURL=main9d550c32d9547799a9e8.js.map
