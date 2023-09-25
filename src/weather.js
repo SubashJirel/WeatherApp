@@ -1,13 +1,19 @@
-async function getWeatherData() {
-  const response = await fetch(
-    'http://api.weatherapi.com/v1/current.json?key=bc2325d447fe4062b0350010232009&q=kathmandu'
-  );
-  const data = await response.json();
-  console.log(data);
-  console.log(data.location.country, data.location.name);
-  console.log(data.current.temp_c);
-  console.log(data.current.temp_f);
-  return data;
+async function getWeatherData(city) {
+  try {
+    const url = `http://api.weatherapi.com/v1/current.json?key=bc2325d447fe4062b0350010232009&q=${city}`;
+    const response = await fetch(url);
+
+    const data = await response.json();
+    if (response.ok) {
+      console.log('Success from weather.js', data);
+      return data;
+    } else {
+      throw new Error(`City ${city} not found`);
+    }
+  } catch (error) {
+    alert(error);
+    return null;
+  }
 }
 
 export default getWeatherData;

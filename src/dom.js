@@ -1,5 +1,15 @@
-function domManipulation() {
-  return 'here we do dom manipulation, form dom.js, after webpackInstallation';
-}
+import getWeatherData from './weather';
 
-export default domManipulation;
+const dom = (() => {
+  const searchBox = document.querySelector('#search-box');
+  const searchBtn = document.querySelector('#search-btn');
+
+  searchBtn.addEventListener('click', getTemperatureOfTheCity);
+
+  async function getTemperatureOfTheCity() {
+    const city = searchBox.value;
+    const data = await getWeatherData(city);
+    console.log('from dom.js   ', data);
+  }
+})();
+export default dom;
