@@ -28,9 +28,93 @@ ___CSS_LOADER_EXPORT___.push([module.id, `* {
   font-family: 'Raleway', sans-serif;
 }
 body {
-  /* background-color: #222; */
+  background: #222;
 }
-`, "",{"version":3,"sources":["webpack://./src/styles.css"],"names":[],"mappings":"AAAA;EACE,SAAS;EACT,UAAU;EACV,sBAAsB;EACtB,kCAAkC;AACpC;AACA;EACE,4BAA4B;AAC9B","sourcesContent":["* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n  font-family: 'Raleway', sans-serif;\r\n}\r\nbody {\r\n  /* background-color: #222; */\r\n}\r\n"],"sourceRoot":""}]);
+.card {
+  width: 90%;
+  max-width: 470px;
+  border-radius: 20px;
+  background: #22c1c3; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #fdbb2d,
+    #22c1c3
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #fdbb2d,
+    #22c1c3
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #fff;
+  margin: 50px auto 0;
+  padding: min(5%, 40px) min(5%, 35px);
+  text-align: center;
+}
+.search {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.search input {
+  border: 0;
+  outline: 0;
+  background: #ebfffc;
+  color: #555;
+  padding: 10px 25px;
+  height: 60px;
+  flex: 1;
+  margin-right: 16px;
+  font-size: 18px;
+  border-radius: 30px;
+  min-width: 0;
+}
+.search button {
+  border: 0;
+  outline: 0;
+  background: #ebfffc;
+  color: #555;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+.search button span {
+  font-size: 40px;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10%;
+}
+.weather h1 {
+  font-size: 80px;
+  font-weight: 500;
+}
+.weather h2 {
+  font-size: 50px;
+  font-weight: 400;
+  margin-top: -10px;
+}
+
+#weather-icon {
+  width: 170px;
+}
+.col {
+  display: flex;
+  text-align: left;
+  align-items: center;
+  gap: 10px;
+}
+.col img {
+  width: 40px;
+}
+.humidity,
+.wind {
+  font-size: 25px;
+}
+`, "",{"version":3,"sources":["webpack://./src/styles.css"],"names":[],"mappings":"AAAA;EACE,SAAS;EACT,UAAU;EACV,sBAAsB;EACtB,kCAAkC;AACpC;AACA;EACE,gBAAgB;AAClB;AACA;EACE,UAAU;EACV,gBAAgB;EAChB,mBAAmB;EACnB,mBAAmB,EAAE,8BAA8B;EACnD;;;;GAIC,EAAE,+BAA+B;EAClC;;;;GAIC,EAAE,qEAAqE;EACxE,WAAW;EACX,mBAAmB;EACnB,oCAAoC;EACpC,kBAAkB;AACpB;AACA;EACE,aAAa;EACb,8BAA8B;EAC9B,WAAW;AACb;AACA;EACE,SAAS;EACT,UAAU;EACV,mBAAmB;EACnB,WAAW;EACX,kBAAkB;EAClB,YAAY;EACZ,OAAO;EACP,kBAAkB;EAClB,eAAe;EACf,mBAAmB;EACnB,YAAY;AACd;AACA;EACE,SAAS;EACT,UAAU;EACV,mBAAmB;EACnB,WAAW;EACX,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,eAAe;AACjB;AACA;EACE,eAAe;AACjB;;AAEA;EACE,aAAa;EACb,8BAA8B;EAC9B,mBAAmB;EACnB,eAAe;AACjB;AACA;EACE,eAAe;EACf,gBAAgB;AAClB;AACA;EACE,eAAe;EACf,gBAAgB;EAChB,iBAAiB;AACnB;;AAEA;EACE,YAAY;AACd;AACA;EACE,aAAa;EACb,gBAAgB;EAChB,mBAAmB;EACnB,SAAS;AACX;AACA;EACE,WAAW;AACb;AACA;;EAEE,eAAe;AACjB","sourcesContent":["* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n  font-family: 'Raleway', sans-serif;\r\n}\r\nbody {\r\n  background: #222;\r\n}\r\n.card {\r\n  width: 90%;\r\n  max-width: 470px;\r\n  border-radius: 20px;\r\n  background: #22c1c3; /* fallback for old browsers */\r\n  background: -webkit-linear-gradient(\r\n    to bottom,\r\n    #fdbb2d,\r\n    #22c1c3\r\n  ); /* Chrome 10-25, Safari 5.1-6 */\r\n  background: linear-gradient(\r\n    to bottom,\r\n    #fdbb2d,\r\n    #22c1c3\r\n  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */\r\n  color: #fff;\r\n  margin: 50px auto 0;\r\n  padding: min(5%, 40px) min(5%, 35px);\r\n  text-align: center;\r\n}\r\n.search {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  width: 100%;\r\n}\r\n.search input {\r\n  border: 0;\r\n  outline: 0;\r\n  background: #ebfffc;\r\n  color: #555;\r\n  padding: 10px 25px;\r\n  height: 60px;\r\n  flex: 1;\r\n  margin-right: 16px;\r\n  font-size: 18px;\r\n  border-radius: 30px;\r\n  min-width: 0;\r\n}\r\n.search button {\r\n  border: 0;\r\n  outline: 0;\r\n  background: #ebfffc;\r\n  color: #555;\r\n  border-radius: 50%;\r\n  width: 60px;\r\n  height: 60px;\r\n  cursor: pointer;\r\n}\r\n.search button span {\r\n  font-size: 40px;\r\n}\r\n\r\n.details {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  margin-top: 10%;\r\n}\r\n.weather h1 {\r\n  font-size: 80px;\r\n  font-weight: 500;\r\n}\r\n.weather h2 {\r\n  font-size: 50px;\r\n  font-weight: 400;\r\n  margin-top: -10px;\r\n}\r\n\r\n#weather-icon {\r\n  width: 170px;\r\n}\r\n.col {\r\n  display: flex;\r\n  text-align: left;\r\n  align-items: center;\r\n  gap: 10px;\r\n}\r\n.col img {\r\n  width: 40px;\r\n}\r\n.humidity,\r\n.wind {\r\n  font-size: 25px;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -487,11 +571,84 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-function domManipulation() {
-  return 'here we do dom manipulation, form dom.js, after webpackInstallation';
-}
+/* harmony import */ var _weather__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./weather */ "./src/weather.js");
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (domManipulation);
+
+const dom = (() => {
+  const searchBox = document.querySelector('#search-box');
+  const searchBtn = document.querySelector('#search-btn');
+  const temperatureDisplay = document.querySelector('#temperature');
+  const cityBox = document.querySelector('#city');
+  const humidityName = document.querySelector('.humidity');
+  const windName = document.querySelector('.wind');
+  const imageBox = document.querySelector('img');
+
+  searchBtn.addEventListener('click', getDataOfTheCity);
+  searchBox.addEventListener('keydown', getDataOfTheCityByEnter);
+
+  function getDataOfTheCityByEnter(event) {
+    if (event.key === 'Enter') {
+      searchBtn.click();
+    }
+  }
+
+  async function getDataOfTheCity() {
+    let city = searchBox.value;
+
+    const data = await (0,_weather__WEBPACK_IMPORTED_MODULE_0__["default"])(city);
+    const cityName = data.location.name;
+    const tempCelsius = data.current.temp_c;
+    const humidity = data.current.humidity;
+    const windSpeed = data.current.wind_kph;
+    const weatherCondition = data.current.condition.text;
+    render(cityName, tempCelsius, humidity, windSpeed, weatherCondition);
+    // console.log('from dom.js   ', data);
+  }
+  function render(
+    cityName,
+    tempCelsius,
+    humidity,
+    windSpeed,
+    weatherCondition
+  ) {
+    // console.log(cityName, tempCelsius, humidity, windSpeed);
+    temperatureDisplay.textContent = `${tempCelsius}°c`;
+    cityBox.textContent = cityName;
+    humidityName.textContent = `${humidity} %`;
+    windName.textContent = `${windSpeed} km/h`;
+    imageBox.src = getAppropriateImage(weatherCondition);
+  }
+  function getAppropriateImage(weatherCondition) {
+    const regexSnow = /snow|ice|pellet|blizzard/i;
+    const regexRain = /rain|sleet|thunder/i;
+    const regexDrizzle = /drizzle/i;
+    const regexMist = /mist|fog/i;
+    const regexSunny = /sunny|clear/i;
+    const regexCloudy = /cloud|overcast/i;
+    // console.log('the regex to be matched is ', weatherCondition);
+    if (regexSunny.test(weatherCondition)) {
+      return './clear.png';
+    } else if (regexRain.test(weatherCondition)) {
+      return './rain.png';
+    } else if (regexDrizzle.test(weatherCondition)) {
+      return './drizzle.png';
+    } else if (regexMist.test(weatherCondition)) {
+      return './mist.png';
+    } else if (regexCloudy.test(weatherCondition)) {
+      return './clouds.png';
+    } else if (regexSnow.test(weatherCondition)) {
+      return './snow.png';
+    } else {
+      console.log('fired from last... nothing matched so loading clouds.png');
+      return './clouds.png';
+    }
+  }
+
+  return {
+    getDataOfTheCity,
+  };
+})();
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (dom);
 
 
 /***/ }),
@@ -506,16 +663,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-async function getWeatherData() {
-  const response = await fetch(
-    'http://api.weatherapi.com/v1/current.json?key=bc2325d447fe4062b0350010232009&q=kathmandu'
-  );
-  const data = await response.json();
-  console.log(data);
-  console.log(data.location.country, data.location.name);
-  console.log(data.current.temp_c);
-  console.log(data.current.temp_f);
-  return data;
+async function getWeatherData(city) {
+  try {
+    const url = `http://api.weatherapi.com/v1/current.json?key=bc2325d447fe4062b0350010232009&q=${city}`;
+    const response = await fetch(url);
+
+    const data = await response.json();
+    if (response.ok) {
+      // console.log(data);
+      return data;
+    } else {
+      throw new Error(`City ${city} not found`);
+    }
+  } catch (error) {
+    alert(error);
+    return null;
+  }
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getWeatherData);
@@ -523,13 +686,83 @@ async function getWeatherData() {
 
 /***/ }),
 
-/***/ "./src/asset/weatherImage.jpg":
-/*!************************************!*\
-  !*** ./src/asset/weatherImage.jpg ***!
-  \************************************/
+/***/ "./src/asset/clear.png":
+/*!*****************************!*\
+  !*** ./src/asset/clear.png ***!
+  \*****************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "weatherImage.jpg";
+module.exports = __webpack_require__.p + "clear.png";
+
+/***/ }),
+
+/***/ "./src/asset/clouds.png":
+/*!******************************!*\
+  !*** ./src/asset/clouds.png ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "clouds.png";
+
+/***/ }),
+
+/***/ "./src/asset/drizzle.png":
+/*!*******************************!*\
+  !*** ./src/asset/drizzle.png ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "drizzle.png";
+
+/***/ }),
+
+/***/ "./src/asset/humidity.png":
+/*!********************************!*\
+  !*** ./src/asset/humidity.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "humidity.png";
+
+/***/ }),
+
+/***/ "./src/asset/mist.png":
+/*!****************************!*\
+  !*** ./src/asset/mist.png ***!
+  \****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "mist.png";
+
+/***/ }),
+
+/***/ "./src/asset/rain.png":
+/*!****************************!*\
+  !*** ./src/asset/rain.png ***!
+  \****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "rain.png";
+
+/***/ }),
+
+/***/ "./src/asset/snow.png":
+/*!****************************!*\
+  !*** ./src/asset/snow.png ***!
+  \****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "snow.png";
+
+/***/ }),
+
+/***/ "./src/asset/wind.png":
+/*!****************************!*\
+  !*** ./src/asset/wind.png ***!
+  \****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "wind.png";
 
 /***/ })
 
@@ -650,22 +883,28 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dom */ "./src/dom.js");
 /* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles.css */ "./src/styles.css");
-/* harmony import */ var _asset_weatherImage_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./asset/weatherImage.jpg */ "./src/asset/weatherImage.jpg");
-/* harmony import */ var _weather__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./weather */ "./src/weather.js");
-console.log('Hello from index.js');
+/* harmony import */ var _asset_rain_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./asset/rain.png */ "./src/asset/rain.png");
+/* harmony import */ var _asset_humidity_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./asset/humidity.png */ "./src/asset/humidity.png");
+/* harmony import */ var _asset_wind_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./asset/wind.png */ "./src/asset/wind.png");
+/* harmony import */ var _asset_clouds_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./asset/clouds.png */ "./src/asset/clouds.png");
+/* harmony import */ var _asset_clear_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./asset/clear.png */ "./src/asset/clear.png");
+/* harmony import */ var _asset_drizzle_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./asset/drizzle.png */ "./src/asset/drizzle.png");
+/* harmony import */ var _asset_mist_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./asset/mist.png */ "./src/asset/mist.png");
+/* harmony import */ var _asset_snow_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./asset/snow.png */ "./src/asset/snow.png");
 
 
 
 
-// const imageBox = document.querySelector('#backgroundImage');
-// imageBox.src = weatherImage;
 
 
-console.log((0,_dom__WEBPACK_IMPORTED_MODULE_0__["default"])());
-console.log((0,_weather__WEBPACK_IMPORTED_MODULE_3__["default"])());
+
+
+
+
+
 
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=main9d550c32d9547799a9e8.js.map
+//# sourceMappingURL=main58a4b105ef33af5c0b59.js.map
