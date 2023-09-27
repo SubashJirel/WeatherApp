@@ -1,13 +1,11 @@
-console.log('Hello from index.js');
 import domManipulation from './dom';
+import dom from './dom';
 import './styles.css';
-import weatherImage from './asset/weatherImage.jpg';
 import rain from './asset/rain.png';
 import humidity from './asset/humidity.png';
 import wind from './asset/wind.png';
-// const imageBox = document.querySelector('#backgroundImage');
-// imageBox.src = weatherImage;
-import getWeatherData from './weather';
-
-console.log(domManipulation());
-console.log(getWeatherData());
+import clouds from './asset/clouds.png';
+import clear from './asset/clear.png';
+import drizzle from './asset/drizzle.png';
+import mist from './asset/mist.png';
+import snow from './asset/snow.png';

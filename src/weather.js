@@ -5,7 +5,7 @@ async function getWeatherData(city) {
 
     const data = await response.json();
     if (response.ok) {
-      console.log('Success from weather.js', data);
+      // console.log(data);
       return data;
     } else {
       throw new Error(`City ${city} not found`);
