@@ -665,7 +665,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 async function getWeatherData(city) {
   try {
-    const url = `http://api.weatherapi.com/v1/current.json?key=bc2325d447fe4062b0350010232009&q=${city}`;
+    const url = `https://api.weatherapi.com/v1/current.json?key=bc2325d447fe4062b0350010232009&q=${city}`;
     const response = await fetch(url, { mode: 'cors' });
 
     const data = await response.json();
@@ -907,4 +907,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=main043bd9735ac5ddb9b491.js.map
+//# sourceMappingURL=mainff8034e42d9d24a69f7e.js.map
